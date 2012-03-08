@@ -23,7 +23,5 @@
         <% } %>
         </ol><hr>
  
-		<iframe src="http://www.objectdb.com/pw.html?spring-download"
-            frameborder="0" scrolling="no" width="100%" height="30"></iframe>
 	</body>
 </html>

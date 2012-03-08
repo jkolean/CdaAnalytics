@@ -3,7 +3,8 @@ package guest;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+import javax.persistence.Query;
+
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
  
@@ -20,8 +21,8 @@ public class GuestDao {
  
     // Retrieves all the guests:
     public List<Guest> getAllGuests() {
-    	TypedQuery<Guest> query = em.createQuery(
-            "SELECT g FROM Guest g ORDER BY g.id", Guest.class);
+    	Query query = em.createQuery(
+            "SELECT g FROM Guest g ORDER BY g.id");
     	return query.getResultList();
     }
 }

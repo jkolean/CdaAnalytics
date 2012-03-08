@@ -31,6 +31,13 @@
         <bean class=
  "org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver"/>
       </property>
+      <property name="jpaVendorAdapter">
+       <bean id="jpaAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+        <property name="generateDdl" value="true" />
+        <property name="showSql" value="true" />
+       </bean>
+      </property>
+      
   </bean>
  
   <!-- Add Transaction support -->
